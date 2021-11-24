@@ -10,6 +10,7 @@
         @include fx($v:center,$direction:column);
 
         li{
+            position: relative;
             padding: 1em;
             .select-peple-button{
                 @include fx($v:center,$h:center);
@@ -24,10 +25,25 @@
                     width: 150px;
                 }
             }
-        
+            .peple-check{
+                display: none;
+                &:checked + .peple-label span{
+                    color: red;
+                }
+            }
+            .peple-label{
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                span{
+                    font-size: 2em;
+                }
+            }
         }
-
     }
+
 }
 
 .total-price-wrap{
