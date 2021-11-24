@@ -2,68 +2,67 @@
 
 
 .content-wrap{
-    width: 50vw;
+    width: 90vw;
     margin: 0 auto;
     height: calc(70vh);
     overflow: scroll;
-    .select-peple-list{
+    .select-menu-list{
         @include fx($v:center,$direction:column);
-
         li{
+            @include fx($v:center,$h:space-between);
             padding: 1em;
-            .select-peple-button{
+            .select-menu-button{
                 @include fx($v:center,$h:center);
                 @include shadow-btn();
                 color: #525564;
                 font-weight: bold;
                 font-size: 1.25rem;
                 background-color: #96C0CE;
-                width: 200px;
+                width: 35vw;
                 height: 60px;
                 @include XS{
-                    width: 150px;
+                    width: 70vw;
                 }
             }
+                @include XS{
+                    flex-direction: column;
+                }
         
         }
 
     }
 }
 
-.total-price-wrap{
+.select-menu-wrap{
     position: absolute;
     right: 5%;
     bottom: 5%;
     font-size: 1.125rem;
-    .select-menu-list{
-        li{
-            position: absolute;
-            top: 0%;
-            padding: 0.5em 1em;
-            background-color: #525564;
-            font-weight: bold;
-            color: #FEF6EB;
-            min-width: 350px;
-            z-index: -1;
-            transition: all 1s;
-        }
-    }
-    .total-price{
+    .select-menu{
         cursor: pointer;
-        min-width: 350px;
         display: inline-block;
         padding: 0.5em 1em;
         background-color: #525564;
         font-weight: bold;
         color: #FEF6EB;
-        &:hover + .select-menu-list li:nth-child(1){
-            top: -100%;
+        width: 150px;
+        &:hover{
+            animation-duration: 0.5s;
+            animation-name: menuHoverWidthGrow;
+            animation-fill-mode: forwards;
         }
-        &:hover + .select-menu-list li:nth-child(2){
-            top: -200%;
-        }
-        &:hover + .select-menu-list li:nth-child(3){
-            top: -300%;
-        }
+
     }
+}
+
+@keyframes menuHoverWidthGrow {
+
+    from{
+        width: 150px;
+    }
+
+    to{
+        width: 70vw;
+    }
+    
 }

@@ -29,6 +29,7 @@
 }
 @mixin shadow-btn($x:2px,$y:2px,$b:2px,$o:rgb(177, 165, 165)) {
 	box-shadow: $x $y $b $o;
+	cursor: pointer;
 	&:active{
 		box-shadow:none;
 	}
