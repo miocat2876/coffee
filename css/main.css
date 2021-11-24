@@ -60,7 +60,6 @@ a:link, a:visited, a:hover, a:active {
 
 /**************** 반응형 ****************/
 .content-wrap {
-  width: 50vw;
   margin: 0 auto;
   height: calc(70vh);
   overflow: scroll;
@@ -136,10 +135,10 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .content-wrap .select-peple-list li .peple-label {
-  width: 30px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  right: 0;
+  right: -70px;
   top: 0;
 }
 
@@ -151,7 +150,7 @@ a:link, a:visited, a:hover, a:active {
   position: absolute;
   right: 5%;
   bottom: 5%;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 .total-price-wrap .select-menu-list li {
@@ -161,7 +160,7 @@ a:link, a:visited, a:hover, a:active {
   background-color: #525564;
   font-weight: bold;
   color: #FEF6EB;
-  min-width: 350px;
+  min-width: 320px;
   z-index: -1;
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -169,7 +168,7 @@ a:link, a:visited, a:hover, a:active {
 
 .total-price-wrap .total-price {
   cursor: pointer;
-  min-width: 350px;
+  min-width: 320px;
   display: inline-block;
   padding: 0.5em 1em;
   background-color: #525564;
